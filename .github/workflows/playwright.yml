@@ -57,6 +57,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Set up Docker Compose
+        run: |
+          sudo apt-get install docker-compose      
+
       - name: Build Docker Image
         run: |
           docker-compose build
@@ -66,6 +70,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      
+      - name: Set up Docker Compose
+        run: |
+          sudo apt-get install docker-compose
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
