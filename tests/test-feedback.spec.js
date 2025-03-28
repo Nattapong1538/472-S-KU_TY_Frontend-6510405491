@@ -7,7 +7,7 @@ test('test-see-feedback', async ({ page }) => {
   await page.getByRole('textbox', { name: 'Input Field' }).press('Tab');
   await page.getByRole('textbox', { name: 'Input Password' }).fill('210746_Ttt');
   await page.getByRole('button', { name: 'เข้าสู่ระบบ' }).click();
-  await page.locator('div').filter({ hasText: /^-1 รายละเอียด$/ }).getByRole('button').click();
+  await page.locator('div').filter({ hasText: /^11 รายละเอียด$/ }).getByRole('button').click();
   await page.getByText('ไม่ระบุตัวตนjjjjjjjjjaaaaaaajajajjajajaj').click();
   const targetElement = await page.getByText('ไม่ระบุตัวตนjjjjjjjjjaaaaaaajajajjajajaj');
   await expect(targetElement).toBeVisible();
@@ -20,7 +20,7 @@ test('test-send-feedback-anonymously', async ({ page }) => {
   await page.getByRole('textbox', { name: 'Input Field' }).press('Tab');
   await page.getByRole('textbox', { name: 'Input Password' }).fill('210746_Ttt');
   await page.getByRole('button', { name: 'เข้าสู่ระบบ' }).click();
-  await page.locator('div').filter({ hasText: /^-1 รายละเอียด$/ }).getByRole('button').click();
+  await page.locator('div').filter({ hasText: /^11 รายละเอียด$/ }).getByRole('button').click();
   await page.getByRole('textbox', { name: 'เขียน Feedback' }).click();
   await page.getByRole('textbox', { name: 'เขียน Feedback' }).fill('commetn feedback brrab arrasdra');
   
@@ -47,7 +47,7 @@ test('test-send-feedback', async ({ page }) => {
   await page.getByRole('textbox', { name: 'Input Field' }).press('Tab');
   await page.getByRole('textbox', { name: 'Input Password' }).fill('210746_Ttt');
   await page.getByRole('button', { name: 'เข้าสู่ระบบ' }).click();
-  await page.locator('div').filter({ hasText: /^-1 รายละเอียด$/ }).getByRole('button').click();
+  await page.locator('div').filter({ hasText: /^11 รายละเอียด$/ }).getByRole('button').click();
   await page.getByRole('textbox', { name: 'เขียน Feedback' }).click();
   await page.getByRole('textbox', { name: 'เขียน Feedback' }).fill(';saldflaskdfjs;lfslfsadfjslksssfffsjdlksfjlksfjl');
   page.once('dialog', dialog => {
